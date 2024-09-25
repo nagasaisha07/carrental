@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserDetails</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(120deg,white,pink,violet);
+            height:100vh;
+            font-family:cursive;
+        }
+        .user{
+            position: relative;
+            top:50%;
+            left:50%;
+            width:400px;
+            transform:translate(-40%,-35%);
+            background:linear-gradient(120deg,blue,skyblue);
+            padding:15px;
+            border-radius:10px;
+        }
+        .details{
+            text-align:center;
+            width:100%;
+            transform:translateY(-30%);
+            padding-bottom:5px;
+            border-bottom:2px gold solid;
+        }
+        .name{
+            text-align:center;
+            transform:translate(-20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="user">
+        <div class="details">
+            <label for="#">Details</label>
+        </div>
+        <div class="name">
+            <label for="#">BillerName : {{billname}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Email : {{billemail}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Phone Number : {{billphone}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Address : {{billaddress}}</label>
+        </div>
+        <div class="name">
+            <label for="#">City : {{billcity}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Select Car : {{cars11}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Number of days for Rent : {{dayss}}</label>
+        </div>
+        <div class="name">
+            <label for="#">Booking Date : {{date}}</label>
+        </div>
+        <div class="name">
+            <label for="#">From Here : {{f1}}</label>
+        </div>
+        <div class="name">
+            <label for="#">To Where : {{t1}}</label>
+        </div>
+    </div>
+</body>
+</html>

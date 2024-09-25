@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Cars{% endblock title %}
+
+{%load static%}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+
+{% block body %}
+ 
+<script  type="text/JavaScript">
+	var sys=5;
+	function add()
+	{
+	if(sys==5)
+	alert("You have successfully logged in ");
+	sys++;
+	}
+  add();
+  </script>
+
+<main role="main" style="background-color: rgb(255, 255, 255)">
+
+    <section class="jumbotron text-center" style="background:linear-gradient(120deg,white,pink,violet)">
+      <div class="container">
+        <h1 class="jumbotron-heading" style="font-size:50px">   Welcome !!</h1>
+       <p style="font-size:25px; margin-top:30px"> AVAILABLE OFFERS </p>
+      </div>
+    </section>
+ 
+    <div class="album py-5 bg-light" id="1">
+      <div class="container" id="2">
+        
+        <div class="row" id="3">
+          {% for i in car %}
+          <div class="col-md-4">
+            
+            <div class="card mb-4 shadow-sm">
+              
+              {%load static%}
+              <img src = '/media/{{i.image}}'  alt="car" class="d-block w-100" height="225" >
+              <div class="card-body">
+                
+                
+                <h4 style="text-align:center" >{{i.car_name}}</h4>
+                
+                <p class="card-text">{{i.car_desc}}</p>
+                <p id="{{i.car_id}}">Price: {{i.price}}</p>
+               
+                <div class="d-flex justify-content-between align-items-center" id="7">
+                  <div class="btn-group" id="8">
+                    <a type="button" class="btn btn-sm btn-dark " href="\bill" id="rentbtn">CHECK IN </a>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          {%endfor%}
+          
+
+
+{% endblock body %}
+
+
+
